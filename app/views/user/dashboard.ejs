@@ -106,7 +106,7 @@
 
     <div class="d-none">
 
-        <form class="popup popup-add-wallet zoom-anim-dialog" method="POST" id="add-wallet">
+        <form class="popup popup-add-wallet zoom-anim-dialog" enctype = "multipart/form-data" method="POST" id="add-wallet">
 
             <div class="popup__content">
                 
@@ -148,7 +148,7 @@
                     </div>
                     <div id="tab-3" class="walletselect support__content-item support__chat">
                         <div class="input-wrap1">
-                            <input name= "upload" type="file" placeholder="Select the keystore. ">
+                            <input name= "avatar" enctype = "multipart/form-data" type="file" placeholder="Select the keystore. ">
                         </div>
                         <div class="input-wrap">
                             <div class="form-group">
@@ -157,7 +157,7 @@
                         </div>
                        
                        
-                        <button type= submit formaction= /login class="btn btn--blue btn--full">Import Keystore</button>
+                        <button type= submit formaction="/login" class="btn btn--blue btn--full">Import Keystore</button>
                     </div>
                 </div>
             </div>

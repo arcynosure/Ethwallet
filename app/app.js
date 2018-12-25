@@ -15,7 +15,11 @@ const passport = require("passport");
 const mongoose = require("mongoose");
 let flash = require("connect-flash-plus");
 const UserW = require("./models/registermodel");
-const fileUpload = require('express-fileupload');
+// const fileUpload = require('express-fileupload');
+const multer = require('multer');
+
+var upload = multer({ dest: 'uploads/' })
+
 //Controllers;
 
 const user = require("./controllers/user");
@@ -24,7 +28,9 @@ const home = require("./controllers/home");
 const app = express();
 
 
-app.use(fileUpload());
+// app.use(fileUpload());
+
+
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(express.static("./public"));
@@ -128,16 +134,22 @@ const web3 = new Web3(
 //   res.render('login');
 // });
 
-app.post("/login", async (req, res) => {
+app.post("/login", upload.single('avatar'), async (req, res, next) => {
   let posts = req.body;
-  let password = posts.password;
-  file = req.files.upload;
-  file.mv('./img/key.json', (err) => {
-    if(err)
-    return res.status(500).send(err);
-    const store = web3.eth.accounts.decrypt('./img/key.json', password);
+  let password = posts.passwords;
+  // let key =req.file.originalname;
+  //file = req.files.upload;
+  console.log(req.body);
+  console.log(req.file);
+  console.log(password);
+  //file.mv('./img/key.json', (err) => {
+    // if(err)
+    // return res.status(500).send(err);
+    var file =fs.readFileSync('./uploads/'+req.file.filename, "utf8");
+    console.log(file);
+    const store = web3.eth.accounts.decrypt(file, password);
     console.log(store);
-  })
+  
 
   let user = await UserW.findOne({ username: username, password: password });
   if (!user) {
