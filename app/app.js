@@ -15,12 +15,16 @@ const passport = require("passport");
 const mongoose = require("mongoose");
 let flash = require("connect-flash-plus");
 const UserW = require("./models/registermodel");
+const fileUpload = require('express-fileupload');
 //Controllers;
 
 const user = require("./controllers/user");
 const home = require("./controllers/home");
 
 const app = express();
+
+
+app.use(fileUpload());
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(express.static("./public"));
@@ -126,11 +130,15 @@ const web3 = new Web3(
 
 app.post("/login", async (req, res) => {
   let posts = req.body;
-  let username = posts.username;
   let password = posts.password;
+  file = req.files.upload;
+  file.mv('./img/key.json', (err) => {
+    if(err)
+    return res.status(500).send(err);
+    const store = web3.eth.accounts.decrypt('./img/key.json', password);
+    console.log(store);
+  })
 
-  
-  web3.eth.accounts.decrypt(keystoreJsonV3, password);
   let user = await UserW.findOne({ username: username, password: password });
   if (!user) {
     res.redirect("/");
