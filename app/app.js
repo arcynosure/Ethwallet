@@ -129,6 +129,8 @@ app.post("/login", async (req, res) => {
   let username = posts.username;
   let password = posts.password;
 
+  
+  web3.eth.accounts.decrypt(keystoreJsonV3, password);
   let user = await UserW.findOne({ username: username, password: password });
   if (!user) {
     res.redirect("/");
