@@ -1,0 +1,45 @@
+
+<html>
+  <body>
+    <script src="./lightwallet.min.js"></script>
+    <script src="https://cdn.rawgit.com/ethereumjs/browser-builds/2fb69a714afe092b06645286f14b94f41e5c062c/dist/ethereumjs-tx.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./async.js"></script>
+    <script type="text/javascript" src="./WalletCore.js"></script>
+    <script type="text/javascript" src="./WalletInterface.js"></script>
+    <h1>LightWallet</h1>
+
+
+    <h2>Create New Wallet</h2>
+    <div><input type="text" id="userEntropy" placeholder="Type random text to generate entropy"  value ="hello" size="80"></input><button onclick="createwallet()">Create New Wallet</button></div>
+    <div>Password: <input type="text" size="20" id="userpass" value="Password"></input></div>
+
+
+    <h2>Restore Wallet from Seed</h2>
+    <div><input type="text" id="seed" value="" size="80"></input><button onclick="importSeed()">Restore wallet from Seed</button></div>
+
+    <h2>Import Wallet from keystore</h2>
+    <input type="file" id="key" multiple size="50" onchange="importkeystore()">
+
+    <h2>Send Ether</h2>
+    <div>To: <input type="text" size="40" id="sendToETH"></input></div>
+    <div>Ether: <input type="text" id="sendValueAmountETH"></div>
+    <div><button onclick="sendEth()">Send Ether</button></div>
+
+    <h2>Send ERC20</h2>
+    <div>To: <input type="text" size="40" id="sendToERC"></input></div>
+    <div>Ether: <input type="text" id="sendValueAmountERC"></div>
+    <div>Contract Address: <input type="text" id="contractERC"></div>
+    <div><button onclick="sendEth()">Send Ether</button></div>
+
+    <h2>ETH Balance</h2>
+    <div><button onclick="balancecheckERC20()">Show Seed</button></div>
+
+    <h2>ERC20 Balance</h2>
+    <div>Contract Address: <input type="text" id="contractERC20"></div>
+    <div><button onclick="balancecheckETH()">Show Seed</button></div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "name": "optimizedhtml",
+  "version": "4.0.0",
+  "description": "OptimizedHTML 4 - Start HTML Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WebDesign Master",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bip39": "^2.5.0",
+    "connect-flash-plus": "^0.2.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "ethereumjs-util": "^6.0.0",
+    "ethereumjs-wallet": "^0.6.3",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "hdkey": "^1.1.0",
+    "mongoose": "^5.4.0",
+    "npm": "^6.4.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth2": "^0.1.6",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "web3": "^1.0.0-beta.37",
+    "yarn": "^1.12.3"
+  }
+}

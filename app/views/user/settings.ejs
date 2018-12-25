@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+    <% include partials/head %>
+<body>
+
+	<div class="preloader"></div>
+
+	<div class="wrapper">
+
+        <% include partials/header %>
+
+		<div class="content">
+            <% include partials/aside %>
+
+			<main class="main-content">
+				<section class="settings">
+
+					<div class="settings__header">
+						<h2>Settings</h2>
+
+						<ul class="settings__tabs">
+							<li class="settings__tabs-item active" data-tab="1">User profile</li>
+							<li class="settings__tabs-item" data-tab="2">Security</li>
+							<li class="settings__tabs-item" data-tab="3">Refer Users</li>
+						</ul>
+					</div>
+
+					<div class="settings__content">
+
+						<div id="tab-1" class="settings__content-item settings__profile active">
+							
+
+							<div class="settings__row">
+								<div class="settings__col">
+
+									<div class="settings__text">
+										<h4>Change Password</h4>
+										<p>Enable 2-factor authentication <br> on the security page.</p>
+									</div>
+
+									<a href="" class="btn btn--blue">Change password</a>
+
+								</div>
+							</div>
+
+							<form class="form settings-form">
+
+								<div class="form__row">
+
+									<div class="form__col-xl">
+										<label class="form__label">
+											User name
+										</label>
+										<div class="input-wrap">
+											<input type="text" value="Alex Balden">
+										</div>
+									</div>
+
+									<div class="form__col-lg">
+										<label class="form__label">
+											Email
+										</label>
+										<div class="input-wrap">
+											<input type="text" value="infor@grypterium.io">
+										</div>
+									</div>
+
+									<div class="form__col-xs">
+										<label class="form__label">
+											Select currency
+										</label>
+										<select class="custom-select">
+											<option value="USD">USD</option>
+											<option value="RUB">RUB</option>
+											<option value="UAH">UAH</option>
+										</select>
+									</div>
+
+								</div>
+
+
+								<button class="btn btn--green">Save settings</button>
+
+							</form>
+
+						</div>
+						<div id="tab-2" class="settings__content-item settings__security">
+							
+							<form class="security">
+
+								<div class="security__row">
+									<div class="security__col">
+										<h3>Two-factor Authorization</h3>
+										<p>Two-factor authorization allows you to significantly enhance the protection of your account.</p>
+
+										<ul class="checkbox-list">
+											<li>
+												<label class="checkbox">
+													Request when signing in
+													<input class="checkbox__input" checked type="checkbox">
+													<span class="checkbox__checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkbox">
+													Prompt for payments / transfers (can not be disabled)
+													<input class="checkbox__input" checked type="checkbox">
+													<span class="checkbox__checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkbox">
+													Prompt when changing settings (can not be disabled)
+													<input class="checkbox__input" checked type="checkbox">
+													<span class="checkbox__checkmark"></span>
+												</label>
+											</li>
+										</ul>
+
+
+										<div class="switch-block">
+											<label class="switch">
+												<input checked class="switch__checkbox" type="checkbox">
+												<span class="switch__slider"></span>
+											</label>
+	
+											<p><b>Disable Two-Factor Authorization</b></p>
+										</div>
+
+									</div>
+									<div class="security__col">
+
+										<div class="security__block">
+											<h3>Additional Settings</h3>
+											<p>Two-factor authorization allows you to significantly enhance the protection of your account.</p>
+
+											<div class="switch-block">
+												<label class="switch">
+													<input class="switch__checkbox" type="checkbox">
+													<span class="switch__slider"></span>
+												</label>
+		
+												<p>Activate smart wallet protection for each authorization.</p>
+											</div>
+										</div>
+										
+										<div class="security__block">
+											<h3>Billing password</h3>
+
+											<div class="switch-block">
+												<label class="switch">
+													<input class="switch__checkbox" type="checkbox">
+													<span class="switch__slider"></span>
+												</label>
+		
+												<p>Request a password for each transfer / payment.</p>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="security__row">
+									<a href="" class="btn btn--green">Save settings</a>
+								</div>
+
+							</form>
+
+							<div class="connections">
+
+								<h3>Last Account Connections</h3>
+
+								<div class="connections">
+									<div class="connection">
+										<div class="connection__data">
+											June 26, 2017 5:59AM
+										</div>
+										<div class="connection__ip">
+											5.254.65.114
+										</div>
+										<div class="connection__location">
+											Berlin | Germany
+										</div>
+										<div class="connection__status">
+											Successful login
+										</div>
+									</div>
+
+									<div class="connection">
+										<div class="connection__data">
+											June 26, 2017 5:59AM
+										</div>
+										<div class="connection__ip">
+											5.254.65.114
+										</div>
+										<div class="connection__location">
+											Berlin | Germany
+										</div>
+										<div class="connection__status">
+											Successful login
+										</div>
+									</div>
+
+									<div class="connection">
+										<div class="connection__data">
+											June 26, 2017 5:59AM
+										</div>
+										<div class="connection__ip">
+											5.254.65.114
+										</div>
+										<div class="connection__location">
+											Berlin | Germany
+										</div>
+										<div class="connection__status">
+											Successful login
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div id="tab-3" class="settings__content-item settings__wallets ">
+							
+							<div class="wallet__list">
+								<div class="wallet__item">
+									<div class="form__col-md">
+										<label class="form__label">
+											User name
+										</label>
+										<div class="input-wrap">
+											<input type="text" value="Alex Balden">
+										</div>
+									</div>
+
+								<div class="form__col-md">
+										<label class="form__label">
+											Email
+										</label>
+										<div class="input-wrap">
+											<input type="text" value="test@mail.com">
+										</div>
+									</div>
+		
+								</div>
+							</div>
+
+							<div class="wallet__btns">
+								<a href="" class="btn btn--blue">Send Invitation</a>
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+			</main>
+		</div>
+
+	</div>
+
+	<div class="d-none">
+
+		<form class="popup popup-add-wallet zoom-anim-dialog" id="add-wallet">
+			<div class="popup__content">
+				
+				
+				<img class="popup-add-wallet__img" src="img/popup-add-wallet-icon.png" alt="">
+				<h3>Add new wallet</h3>
+
+				<div class="popup-add-wallet__row">
+
+					<div class="input-wrap">
+						<input type="text"  placeholder="Name wallet">
+					</div>
+					
+					<select class="custom-select">
+						<option value="Bitcoin">Bitcoin</option>
+						<option value="Ethereum">Ethereum</option>
+						<option value="Litecoin">Litecoin</option>
+					</select>
+					
+				</div>
+
+				<button class="btn btn--blue btn--full">Add new wallet</button>
+			</div>
+			<div class="popup__thanks">
+				<img src="img/popup-success.png" alt="">
+				<h3>Your wallet added successful!</h3>
+			</div>
+		</form>
+
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

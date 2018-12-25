@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<% include partials/head %>
+
+<body>
+
+	<div class="preloader"></div>
+
+	<div class="wrapper">
+
+        <% include partials/header %>
+
+
+		<div class="content">
+            <% include partials/aside %>>
+
+			<main class="main-content">
+				<div class="wallet-inner">
+					<div class="wallet-inner__header">
+						<h2>EraSwap Token wallet</h2>
+					</div>
+				</div>
+
+				<div class="wallet-inner__row">
+					<div class="wallet-inner__col">
+						<div class="wallet wallet--full-width" style="background-color: #8a0a01;">
+
+							<span class="wallet__header">
+								<span class="wallet__currency">
+									<span class="wallet__currency-icon">
+										
+									</span>
+									<span class="wallet__currency-info">
+										<span>EraSwap Token Wallet</span>
+										<span>ETC</span>
+									</span>
+								</span>
+
+								<span class="wallet__last-transactions">
+									<span>- 5$</span>
+									<span>Last day</span>
+								</span>
+
+								<span class="wallet__currency-course">
+									<span>1 EST</span>
+									<span>326 USD</span>
+								</span>
+
+								<span class="wallet__course">
+									<span>1.5 EST</span>
+									<span>2 658 USD</span>
+								</span>
+							</span>
+
+							<span class="wallet__footer">
+								<a href="" class="small-btn">Edit</a>
+
+								<span><b>Wallet number:</b> 0x45e1D2D3C1d001aC30E9C0B10e3a9cdD35018Bf0</span>
+							</span>
+
+							<span class="wallet__bg-img">
+								<img src="img/wallet-bg-img-2.png" alt="">
+							</span>
+						</div>
+
+						<div class="wallet-inner__chart">
+							<h3>EraSwap Token Chart</h3>
+							<div class="chart">
+								<canvas id="line-chart"></canvas>
+							</div>
+							<div class="wallet-inner__btns">
+								<a href="#sent-currency" class="btn btn--blue popup-link">Send EraSwap Token</a>
+								<a href="#confirmation" class="btn btn--purpure popup-link">Buy EraSwap Token</a>
+							</div>
+						</div>
+					</div>
+					<div class="wallet-inner__col">
+						<section class="transactions">
+							<h3>EraSwap Token wallet transactions</h3>
+		
+							<div class="transactions__list">
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-sent.svg" alt="">
+											<p>Sent to 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--minus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+		
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-recived.svg" alt="">
+											<p>Got from 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--plus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-pending.svg" alt="">
+											<p>Pending to 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--minus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-sent.svg" alt="">
+											<p>Sent to 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--minus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+		
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-recived.svg" alt="">
+											<p>Got from 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--plus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-pending.svg" alt="">
+											<p>Pending to 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--minus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-recived.svg" alt="">
+											<p>Got from 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--plus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+
+								<div class="transaction ">
+		
+									<div class="transaction__header transaction__header--three-cols">
+										<div class="transaction__data">
+											June 26, 2017
+										</div>
+				
+										<div class="transaction__info">
+											<img src="img/transaction-icon-pending.svg" alt="">
+											<p>Pending to 3Bhe5sbhSTNxcDpYyy</p>
+										</div>
+		
+										<div class="transaction__course">
+											<span class="rate rate--minus">- 0.1 EST</span>
+											<span class="rate rate--normal">- 25 USD</span>
+										</div>
+									</div>
+		
+									<div class="transaction__body">
+										<ul class="transaction__details">
+											<li>
+												<span>Sender name:</span> Andrew Smith
+											</li>
+											<li>
+												<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+											</li>
+											<li>
+												<span>Condition:</span> Pending
+											</li>
+										</ul>
+									</div>							
+		
+								</div>
+
+							</div>
+		
+							<a href="" class="btn btn--blue">All transactions</a>
+						</section>
+					</div>
+				</div>
+
+			</main>
+		</div>
+
+	</div>
+
+	<div class="d-none">
+
+		<form class="popup popup-sent-currency zoom-anim-dialog form" id="sent-currency">
+			<div class="popup__content">
+				
+				<img class="popup-add-wallet__img" src="img/popup-add-wallet-icon.png" alt="">
+				<h3 class="form__title">Send EST</h3>
+
+				<div class="form__row">
+					<div class="input-wrap">
+						<input type="text" placeholder="Enter a EST adress">
+					</div>
+				</div>
+
+				<label class="form__label">Withdraw From</label>
+				<div class="form__row">
+					<select class="custom-select">
+						<option value="Bitcoin">Bitcoin wallet</option>
+						<option value="EraSwap Token">EraSwap Token wallet</option>
+						<option value="Litecoin">Litecoin wallet</option>
+					</select>
+				</div>
+
+				<label class="form__label">Amount</label>
+				<div class="form__row">
+					<div class="input-wrap input-wrap--50">
+						<input type="text" value="0.00">
+						<label class="input-wrap__label">USD</label>
+					</div>
+					<div class="input-wrap input-wrap--50">
+						<input type="text" value="0.00">
+						<label class="input-wrap__label">EST</label>
+					</div>
+				</div>
+
+				<label class="form__label">Note</label>
+				<div class="form__row">
+					<div class="input-wrap">
+						<input type="text" placeholder="Write an optional message">
+					</div>
+				</div>
+
+				<button class="btn btn--blue btn--full">Continue</button>
+			</div>
+			<div class="popup__thanks">
+				<img src="img/popup-success.png" alt="">
+				<h3>Your wallet added successful!</h3>
+			</div>
+		</form>
+
+		<form class="popup popup-confirmation zoom-anim-dialog form" id="confirmation">
+			<div class="popup__content">
+				
+				<img class="popup-add-wallet__img" src="img/confirmation-icon.png" alt="">
+				<h3 class="form__title">Confirmation</h3>
+
+				<label class="form__label">Autontification code:</label>
+				<div class="form__row">
+					<div class="input-wrap">
+						<input type="text" placeholder="Enter code">
+					</div>
+					<img class="popup-confirmation__qr-code" src="img/qr-code.svg" alt="">
+				</div>
+
+				<button class="btn btn--blue btn--full">Send</button>
+			</div>
+			<div class="popup__thanks">
+				<img src="img/popup-success.png" alt="">
+				<h3>Your wallet added successful!</h3>
+			</div>
+		</form>
+
+	</div>
+	<script src="./web3/lightwallet.min.js"></script>
+    <script src="https://cdn.rawgit.com/ethereumjs/browser-builds/2fb69a714afe092b06645286f14b94f41e5c062c/dist/ethereumjs-tx.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3/async.js"></script>
+    <script type="text/javascript" src="./web3/WalletCore.js"></script>
+    <script type="text/javascript" src="./web3/WalletInterface.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<% include partials/head %>
+
+<body>
+
+	<div class="preloader"></div>
+
+	<div class="wrapper">
+
+        <% include partials/header %>
+
+		<div class="content">
+            <% include partials/aside %>
+
+			<main class="main-content">
+				<section class="transactions">
+
+					<div class="transactions__header">
+						<h2>Transactions</h2>
+
+						<a href="" class="btn btn--blue">Send currency</a>
+					</div>
+
+					<div class="transactions__filters">
+
+						<div class="transactions__filters-col">
+
+							<div class="custom-select--grey custom-select--currency">
+								<select class="custom-select">
+									<option value="Bitcoin">Bitcoin</option>
+									<option value="Ethereum">Ethereum</option>
+									<option value="Litecoin">Litecoin</option>
+								</select>
+							</div>
+							
+							<div class="custom-select--grey custom-select--actions">
+								<select class="custom-select">
+									<option value="All transactions">All transactions</option>
+									<option value="Sent">Sent</option>
+									<option value="Pending">Pending</option>
+									<option value="Recieved">Recieved</option>
+									<option value="Decline">Decline</option>
+								</select>
+							</div>
+							
+						</div>
+						<div class="transactions__filters-col transactions__filters-col--align-right">
+							<div class="datapickers">
+								<div class="datapicker-range">
+									<img src="img/calendar.svg" alt="">
+									<input type="text" placeholder="2017-04-01" class="datepicker-input datepicker-here" data-date-format="yyyy-mm-dd">
+								</div>
+								<div class="separator"></div>
+								<div class="datapicker-range">
+									<img src="img/calendar.svg" alt="">
+									<input type="text" placeholder="2017-04-01" class="datepicker-input datepicker-here" data-date-format="yyyy-mm-dd">
+								</div>
+							</div>
+							
+							<div class="input-wrap search-input">
+								<img src="img/search.svg" alt="">
+								<input type="text" placeholder="Search">
+							</div>
+						</div>
+			
+					</div>
+					<% include partials/transaction_list %>
+				</section>
+			</main>
+		</div>
+
+	</div>
+
+	<div class="d-none">
+
+		<form class="popup popup-add-wallet zoom-anim-dialog" id="add-wallet">
+			<div class="popup__content">
+				
+				
+				<img class="popup-add-wallet__img" src="img/popup-add-wallet-icon.png" alt="">
+				<h3>Add new wallet</h3>
+
+				<div class="popup-add-wallet__row">
+
+					<input type="text" placeholder="Name wallet">
+					
+				</div>
+
+				<button class="btn btn--blue btn--full">Add new wallet</button>
+			</div>
+			<div class="popup__thanks">
+				<img src="img/popup-success.png" alt="">
+				<h3>Your wallet added successful!</h3>
+			</div>
+		</form>
+
+	</div>
+	<script src="./web3/lightwallet.min.js"></script>
+    <script src="https://cdn.rawgit.com/ethereumjs/browser-builds/2fb69a714afe092b06645286f14b94f41e5c062c/dist/ethereumjs-tx.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3/async.js"></script>
+    <script type="text/javascript" src="./web3/WalletCore.js"></script>
+    <script type="text/javascript" src="./web3/WalletInterface.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

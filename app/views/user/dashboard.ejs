@@ -1,0 +1,188 @@
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<% include partials/head %>
+
+
+<body>
+    <div class="preloader"></div>
+
+    <div class="wrapper">
+
+        <% include partials/header %>
+
+        <div class="content">
+            <% include partials/aside %>
+            <main class="main-content">
+                <section class="wallets">
+                    <h2>Wallets</h2>
+
+                    <div class="wallets__list">
+
+
+                        <a href="/ethereum" class="wallet" style="background-color: #707bcc;">
+
+                            <span class="wallet__header">
+                                <span class="wallet__currency">
+                                    <span class="wallet__currency-icon">
+                                    </span>
+                                    <span class="wallet__currency-info">
+                                        <span>Ethereum</span>
+                                        <span>ETH</span>
+                                    </span>
+                                </span>
+
+                                <span class="wallet__course">
+                                    <span>0.25 ETH</span>
+                                    <span>248 USD</span>
+                                </span>
+                            </span>
+
+                            <span class="wallet__footer">
+                                <span>1 ETH - 987 USD</span>
+                                <span>- 31$</span>
+                            </span>
+
+                            <span class="wallet__bg-img">
+                                <img src="img/wallet-bg-img-2.png" alt="">
+                            </span>
+                        </a>
+
+                        <a href="/eraswap" class="wallet" style="background-color: #8a0a01;">
+
+                            <span class="wallet__header">
+                                <span class="wallet__currency">
+                                    <span class="wallet__currency-icon">
+
+                                    </span>
+
+                                    <span class="wallet__currency-info">
+                                        <span>EraSwap Token</span>
+                                        <span>ETH</span>
+                                    </span>
+                                </span>
+
+                                <span class="wallet__course">
+                                    <span>10 EST</span>
+                                    <span>8 USD</span>
+                                </span>
+                            </span>
+
+                            <span class="wallet__footer">
+                                <span>1 EST - 8 USD</span>
+                                <span>- 31$</span>
+                            </span>
+
+                            <span class="wallet__bg-img">
+                                <img src="img/wallet-bg-img-2.png" alt="">
+                            </span>
+                        </a>
+
+                        <a href="#add-wallet" class="add-wallet popup-link">
+                            <span class="add-wallet__icon">
+                                <img src="img/add-wallet-icon.png" alt="">
+                            </span>
+                            <span class="add-wallet__text">
+                                Add New Wallet
+                            </span>
+                        </a>
+
+                    </div>
+                </section>
+
+                <section class="transactions">
+                    <h3>Transactions</h3>
+                    <div>
+                        <% include partials/transaction_list %>
+
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div class="d-none">
+
+        <form class="popup popup-add-wallet zoom-anim-dialog" method="POST" id="add-wallet">
+
+            <div class="popup__content">
+                
+                <div>
+                    <img class="popup-add-wallet__img" src="img/popup-add-wallet-icon.png" alt="">
+                    <h3>Add new wallet</h3>
+                    <ul class="support__tabs">
+                        <li class="support__tabs-item active" data-tab="1">Create Wallet</li>
+                        <li class="support__tabs-item" data-tab="2">Restore Wallet</li>
+                        <li class="support__tabs-item" data-tab="3">Import Wallet</li>
+                    </ul>
+                </div>
+                <div class="support__content">
+                    <div id="tab-1" class="walletselect support__content-item support__faq active">
+                        <div class="input-wrap">
+                        </div>
+                        <div class="input-wrap">
+                            <div class="form-group">
+                                <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username1" value="">
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <div class="form-group">
+                                <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="input-wrap">
+                            <div class="form-group">
+                                <input type="password" name="confirm_password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <button type= "submit" formaction="/register" class="btn btn--blue btn--full">Create New Wallet </button>
+                    </div>
+                    <div id="tab-2" class="walletselect support__content-item support__desk">
+                        <div class="input-wrap">
+                            <input type="text" placeholder="Mneumonics">
+                        </div>
+                        <button class="btn btn--blue btn--full">Restore from Seed</button>
+                    </div>
+                    <div id="tab-3" class="walletselect support__content-item support__chat">
+                        <div class="input-wrap1">
+                            <input type="file" placeholder="Select the keystore. ">
+                        </div>
+                        <div class="input-wrap">
+                            <div class="form-group">
+                                <input type="text" name="password" id="passwords" tabindex="1" class="form-control" placeholder="Password" value="">
+                            </div>
+                        </div>
+                       
+                       
+                        <button type= submit formaction= /login class="btn btn--blue btn--full">Import Keystore</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup__thanks">
+                <img src="img/popup-success.png" alt="">
+                <h3>Your wallet added successful!</h3>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="./web3/lightwallet.min.js"></script>
+    <script src="https://cdn.rawgit.com/ethereumjs/browser-builds/2fb69a714afe092b06645286f14b94f41e5c062c/dist/ethereumjs-tx.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3/async.js"></script>
+    <script type="text/javascript" src="./web3/WalletCore.js"></script>
+    <script type="text/javascript" src="./web3/WalletInterface.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+    <script src="/js/scripts.min.js"></script>
+
+
+</body>
+
+</html>
