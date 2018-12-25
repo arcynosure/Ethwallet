@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>New Token</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="jumbotron text-center">
+    <h2>New Token</h2>
+</div>
+
+<div class="container">
+    <form action="/view-balance" method="post">
+        <div class="row">
+            <span class="col-md-2">Name: </span>
+            <span class="col-md-6"><%= name %></span>
+        </div>
+        <br/>
+        <div class="row">
+            <span class="col-md-2">Symbol: </span>
+            <span class="col-md-6"><%= symbol %></span>
+        </div>
+        <br/>
+        <br/>
+
+        <button type="submit" class="btn btn-success">Accept</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+​

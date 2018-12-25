@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>View Balance</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="jumbotron text-center">
+    <h2>Balance</h2>
+</div>
+
+<div class="container">
+    <div class="row">
+        <span class="col-md-2">Balance: </span>
+        <span class="col-md-6"><%= balance %></span>
+    </div>
+    <br/>
+    <br/>
+
+    <center><h3>Send Token</h3></center>
+
+    <form action="/sent-trxn" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="recipient" class="form-control" placeholder="Recipient" />
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="value" class="form-control" placeholder="Value" />
+            </div>
+        </div>
+        <br/>
+        <br/>
+
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+​
