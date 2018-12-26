@@ -106,7 +106,7 @@
 
     <div class="d-none">
 
-        <form class="popup popup-add-wallet zoom-anim-dialog" enctype = "multipart/form-data" method="POST" id="add-wallet">
+        <div class="popup popup-add-wallet zoom-anim-dialog" id="add-wallet">
 
             <div class="popup__content">
                 
@@ -120,7 +120,9 @@
                     </ul>
                 </div>
                 <div class="support__content">
+                    
                     <div id="tab-1" class="walletselect support__content-item support__faq active">
+                    <form method="POST" action="/register">
                         <div class="input-wrap">
                         </div>
                         <div class="input-wrap">
@@ -138,27 +140,38 @@
                                 <input type="password" name="confirm_password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
                             </div>
                         </div>
-                        <button type= "submit" formaction="/register" class="btn btn--blue btn--full">Create New Wallet </button>
+                        <button type= "submit"  class="btn btn--blue btn--full">Create New Wallet </button>
+                    </form>
+                
                     </div>
+                
+                
                     <div id="tab-2" class="walletselect support__content-item support__desk">
+                            <form action="" method="post">
                         <div class="input-wrap">
                             <input type="text" placeholder="Mneumonics">
                         </div>
                         <button class="btn btn--blue btn--full">Restore from Seed</button>
+                    </form>
                     </div>
+                  
+                    
                     <div id="tab-3" class="walletselect support__content-item support__chat">
+                            <form method="post" action="/login" enctype="multipart/form-data">
                         <div class="input-wrap1">
                             <input name= "avatar" enctype = "multipart/form-data" type="file" placeholder="Select the keystore. ">
                         </div>
                         <div class="input-wrap">
                             <div class="form-group">
-                                <input type="text" name="passwords" id="passwords" tabindex="1" class="form-control" placeholder="Password" value="">
+                                <input type="password" name="passwords" id="passwords" tabindex="1" class="form-control" placeholder="Password" value="">
                             </div>
                         </div>
                        
                        
-                        <button type= submit formaction="/login" class="btn btn--blue btn--full">Import Keystore</button>
+                        <button type= submit class="btn btn--blue btn--full">Import Keystore</button>
+                    </form>
                     </div>
+                    
                 </div>
             </div>
 
@@ -166,7 +179,7 @@
                 <img src="img/popup-success.png" alt="">
                 <h3>Your wallet added successful!</h3>
             </div>
-        </form>
+        </div>
 
     </div>
 

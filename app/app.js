@@ -165,7 +165,7 @@ app.post('/register', function(req, res) {
   let username = posts.username;
   let password = posts.password;
   let confirm_pwd = posts.confirm_password;
-
+  console.log(req.body);
   if (password !== confirm_pwd) {
     res.redirect("/");
   } else {
